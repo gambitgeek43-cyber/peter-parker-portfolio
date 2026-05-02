@@ -9,28 +9,28 @@ html {
 }
 
 body {
-  background: #0a0a0a;
-  color: #f5f5f5;
+  background: #FAF8F5;
+  color: #1A1A1A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: #dc2626;
-  color: #f5f5f5;
+  background: #C9922A;
+  color: #FAF8F5;
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #FAF8F5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #dc2626;
+  background: #C9922A;
 }
 
 a {
@@ -39,4 +39,10 @@ a {
 
 button {
   font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

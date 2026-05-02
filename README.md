@@ -1,49 +1,61 @@
-# Peter Parker — Portfolio
+# Caitlin Symonds — Portfolio
 
-Spider-Man art and illustration portfolio built with Next.js 14.
+Marketing & Design portfolio built with Next.js 14.
 
 ## File Structure
 
 ```
 app/
-  layout.tsx        ← Root layout with fonts + metadata
-  globals.css       ← Global styles
-  page.tsx          ← Home / landing page
-  showcase/
-    page.tsx        ← Project showcase / gallery page
+  layout.tsx          ← Root layout, fonts, metadata
+  globals.css         ← Global styles
+  page.tsx            ← Home page
+  work/
+    page.tsx          ← Work / projects showcase
+  about/
+    page.tsx          ← About, experience, tools
 package.json
 next.config.js
 tsconfig.json
 ```
 
-## How to Set Up on GitHub
+## Pages
 
-1. Create a new repo on GitHub called `peter-parker-portfolio`
-2. Create each file listed above and paste in the code
-3. Commit all files
+- **Home** — Hero intro, featured work, capabilities, contact CTA
+- **Work** — Full filterable project grid (9 projects)
+- **About** — Bio, experience timeline, tools, education
 
-## How to Deploy on Vercel
+## How to Update Projects
 
-1. Go to vercel.com/new
-2. Import your GitHub repo
-3. Click Deploy — done!
+Open `app/work/page.tsx` and edit the `projects` array at the top.
 
-## How to Update Your Projects
-
-Open `app/showcase/page.tsx` and edit the `projects` array at the top of the file.
 Each project has:
-- `title` — name of the piece
-- `category` — type of work
-- `year` — when it was made
-- `description` — short description shown on hover
-- `tags` — array of tag labels
-- `color` — accent color for that card
+- `title` — project name
+- `category` — used for filtering
+- `client` — client name shown on card
+- `year` — year(s)
+- `description` — shown on hover
+- `tags` — tool/style tags
+- `accent` — card accent colour (`#C9922A` gold or `#2C3E5C` slate)
 
-## To Add a Real Image
+## Adding Real Images
 
-Replace the card placeholder div with a Next.js Image component:
+1. Add image files to `/public/` folder
+2. Import Next.js Image component in the work page:
 ```tsx
 import Image from "next/image";
+```
+3. Replace the `.card-placeholder` div with:
+```tsx
 <Image src="/your-image.jpg" alt={project.title} fill className="object-cover" />
 ```
-Put your images in the `/public` folder.
+
+## Deploying
+
+1. Push to GitHub (public repo)
+2. Import to Vercel at vercel.com/new
+3. Click Deploy — live in ~2 minutes
+
+## Contact Details on Site
+- Email: caitlin.a.symonds@gmail.com
+- LinkedIn: linkedin.com/in/caitlin-symonds
+- Location: Brisbane, QLD
